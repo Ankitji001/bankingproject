@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Banking App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Online Banking App</h1>
+    
+    <!-- Login Form -->
+    <div id="loginForm">
+      <h2>Login</h2>
+      <form id="loginFormFields">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit" id="loginBtn">Login</button>
+      </form>
+    </div>
+    
+    <!-- Signup Form -->
+    <div id="signupForm">
+      <h2>Signup</h2>
+      <form id="signupFormFields">
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" required>
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" required>
+        <button type="submit" id="signupBtn">Signup</button>
+      </form>
+    </div>
+
+    <!-- Dashboard (Visible only after login) -->
+    <div id="dashboard" style="display:none;">
+      <div id="balance">Balance: $<span id="balanceAmount">1000</span></div>
+      <form id="transactionForm">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+        <button type="submit" id="depositBtn">Deposit</button>
+        <button type="submit" id="withdrawBtn">Withdraw</button>
+      </form>
+      <div id="transactionHistory">
+        <h2>Transaction History</h2>
+        <ul id="transactionsList">
+          <!-- Transactions will be added dynamically here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
